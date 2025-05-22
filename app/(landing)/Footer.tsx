@@ -10,13 +10,14 @@ export default function Footer() {
                 <div className="footer-brand">
                     <Image src="/images/logo.svg" alt="logo" width={100} height={100} />
                 </div>
-                <div className="address max-w-[196px] mt-4">
+                <div className="address max-w-[196px] mt-4 text-white">
                     <p>731 Walker Road, Suite F, Great Falls, VA 22066</p>
                 </div>
                 <div className="socials max-w-[192px] mt-4 flex gap-6">
                     <Image src="/images/yt.svg" alt="socials" width={24} height={24} />
                     <Image src="/images/ig.svg" alt="socials" width={24} height={24} />
-                    {/* Add Facebook & Tiktok */}
+                    <Image src="/images/fb.svg" alt="socials" width={24} height={24} />
+                    <Image src="/images/tt.svg" alt="socials" width={24} height={24} />
                 </div>
             </div>
             <div className="footer-core-right flex gap-[44px]">
@@ -64,3 +65,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+{/* Ensure responsive design for footer on mobile and tablet */}
