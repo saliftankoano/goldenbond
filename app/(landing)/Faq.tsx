@@ -8,7 +8,7 @@ import {
 import Image from "next/image";
 export default function Faq() {
     return (
-        <section className="bg-[#F4F1EB] w-full h-[919px] relative overflow-hidden">
+        <section className="w-full h-[919px] relative overflow-hidden">
             <div className="header flex flex-col items-center justify-center pt-[15vh] relative">
                 <div className="header">
                     <h2 className="text-center text-[#B58E5A] text-[16px] font-bold  tenor-font">FAQ</h2>
