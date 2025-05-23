@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="footer-core max-w-[1210px] flex justify-between">
             <div className="footer-core-left">
                 <div className="footer-brand">
-                    <Image src="/images/logo.svg" alt="logo" width={100} height={100} />
+                    <Image src="/images/logo.svg" alt="logo" width={117} height={117} />
                 </div>
                 <div className="address max-w-[196px] mt-4 text-white">
                     <p>731 Walker Road, Suite F, Great Falls, VA 22066</p>
