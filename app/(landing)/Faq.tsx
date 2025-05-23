@@ -13,8 +13,8 @@ export default function Faq() {
                 <div className="header">
                     <h2 className="text-center text-[#B58E5A] text-[16px] font-bold  tenor-font">FAQ</h2>
                 </div>
-                <div className="header-desc">
-                    <h1 className="text-[#1B0E01] text-[48px] font-semibold garamond-font">Tailored events for you.</h1>
+                <div className="header-desc -mt-2">
+                    <h1 className="text-[#1B0E01] text-[32px] sm:text-[40px] md:text-[48px] font-semibold garamond-font">Tailored events for you.</h1>
                 </div>
                 <Image 
                     src="/images/small-ellipse.svg" 
@@ -24,8 +24,8 @@ export default function Faq() {
                     className="absolute top-1/2 -translate-y-1/2 right-4 md:right-8 lg:right-16 w-[80px] h-[80px] sm:w-[120px] sm:h-[120px] md:w-[160px] md:h-[160px] z-10" 
                 />
             </div>
-            <div className="faq-container max-w-[1180px] mx-auto px-[190px] pb-[15vh] pt-[5vh] relative">
-                <div className="max-w-[800px]">
+            <div className="faq-container max-w-[1180px] mx-auto px-4 sm:px-8 md:px-16 lg:px-[100px] xl:px-[190px] pb-[15vh] pt-[5vh] relative">
+                <div className="max-w-[800px] mx-auto">
                     <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
                             <AccordionTrigger>How does pricing work for Large Private Events and Corporate bookings?</AccordionTrigger>
@@ -76,7 +76,7 @@ export default function Faq() {
                     alt="large ellipse" 
                     width={257} 
                     height={257} 
-                    className="absolute bottom-[50px] -left-[160px] w-[120px] h-[120px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[257px] lg:h-[257px] z-0" 
+                    className="absolute bottom-[50px] -left-[50px] sm:-left-[80px] md:-left-[120px] lg:-left-[160px] w-[120px] h-[120px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[257px] lg:h-[257px] z-0" 
                 />
             </div>
         </section>
