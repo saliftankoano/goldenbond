@@ -8,8 +8,8 @@ import {
 import Image from "next/image";
 export default function Faq() {
     return (
-        <section className="bg-[#F4F1EB] w-full relative overflow-hidden">
-            <div className="header flex flex-col items-center justify-center pt-[10vh] relative">
+        <section className="bg-[#F4F1EB] w-full h-[919px] relative overflow-hidden">
+            <div className="header flex flex-col items-center justify-center pt-[15vh] relative">
                 <div className="header">
                     <h2 className="text-center text-[#B58E5A] text-[16px] font-bold  tenor-font">FAQ</h2>
                 </div>
@@ -21,10 +21,10 @@ export default function Faq() {
                     alt="small ellipse" 
                     width={160} 
                     height={160} 
-                    className="absolute top-1/2 -translate-y-1/2 right-4 md:right-8 lg:right-16 w-[80px] h-[80px] sm:w-[120px] sm:h-[120px] md:w-[160px] md:h-[160px] z-10" 
+                    className="absolute top-3/4 -translate-y-1/2 right-4 md:right-8 lg:right-16 w-[80px] h-[80px] sm:w-[120px] sm:h-[120px] md:w-[160px] md:h-[160px] z-10" 
                 />
             </div>
-            <div className="faq-container max-w-[1180px] mx-auto px-4 sm:px-8 md:px-16 lg:px-[100px] xl:px-[190px] pb-[15vh] pt-[5vh] relative">
+            <div className="faq-container max-w-[1180px] mx-auto px-4 sm:px-8 md:px-16 lg:px-[100px] xl:px-[190px] pb-[0vh] pt-[5vh] relative">
                 <div className="max-w-[800px] mx-auto">
                     <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="item-1">
@@ -76,7 +76,7 @@ export default function Faq() {
                     alt="large ellipse" 
                     width={257} 
                     height={257} 
-                    className="absolute bottom-[50px] -left-[50px] sm:-left-[80px] md:-left-[120px] lg:-left-[160px] w-[120px] h-[120px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[257px] lg:h-[257px] z-0" 
+                    className="absolute -bottom-[100px] -left-[50px] sm:-left-[80px] md:-left-[120px] lg:-left-[160px] w-[120px] h-[120px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px] lg:w-[257px] lg:h-[257px] z-0" 
                 />
             </div>
         </section>
