@@ -14,10 +14,10 @@ export default function Footer() {
                     <p>731 Walker Road, Suite F, Great Falls, VA 22066</p>
                 </div>
                 <div className="socials max-w-[192px] mt-4 flex gap-6">
-                    <Image src="/images/yt.svg" alt="socials" width={24} height={24} />
-                    <Image src="/images/ig.svg" alt="socials" width={24} height={24} />
-                    <Image src="/images/fb.svg" alt="socials" width={24} height={24} />
-                    <Image src="/images/tt.svg" alt="socials" width={24} height={24} />
+                    <Image src="/images/socials/yt.svg" alt="socials" width={24} height={24} />
+                    <Image src="/images/socials/ig.svg" alt="socials" width={24} height={24} />
+                    <Image src="/images/socials/fb.svg" alt="socials" width={24} height={24} />
+                    <Image src="/images/socials/tt.svg" alt="socials" width={24} height={24} />
                 </div>
             </div>
             <div className="footer-core-right flex flex-col sm:flex-row gap-8 sm:gap-10 md:gap-[44px] mt-10 lg:mt-0">
