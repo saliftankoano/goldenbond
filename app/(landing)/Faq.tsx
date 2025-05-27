@@ -34,15 +34,15 @@ export default function Faq() {
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-2">
-                            <AccordionTrigger>What if some guests don't want welded jewelry? Are there other options?</AccordionTrigger>
+                            <AccordionTrigger>What if some guests don&apos;t want welded jewelry? Are there other options?</AccordionTrigger>
                             <AccordionContent>
-                            While our signature experience is custom welded jewelry, we understand not every guest may want permanent jewelry. We can provide alternative options like charm bracelets, adjustable pieces, or temporary jewelry options that don't require welding. We'll work with you during planning to ensure every guest has an enjoyable experience that fits their comfort level.
+                            While our signature experience is custom welded jewelry, we understand not every guest may want permanent jewelry. We can provide alternative options like charm bracelets, adjustable pieces, or temporary jewelry options that don&apos;t require welding. We&apos;ll work with you during planning to ensure every guest has an enjoyable experience that fits their comfort level.
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-3">
                             <AccordionTrigger> What happens if I need to cancel or reschedule my event?</AccordionTrigger>
                             <AccordionContent>
-                            The $200 deposit required for all Sparkle Parties (In-Store and In-Home) is non-refundable but will be applied to your total event cost. If you need to reschedule, we'll work with you to find a new date based on availability. For Large Private Events and Corporate bookings, cancellation policies will be outlined in your custom contract based on the event scope and timeline.
+                            The $200 deposit required for all Sparkle Parties (In-Store and In-Home) is non-refundable but will be applied to your total event cost. If you need to reschedule, we&apos;ll work with you to find a new date based on availability. For Large Private Events and Corporate bookings, cancellation policies will be outlined in your custom contract based on the event scope and timeline.
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-4">
@@ -60,7 +60,7 @@ export default function Faq() {
                         <AccordionItem value="item-6">
                             <AccordionTrigger>Do you travel outside your local area for events?</AccordionTrigger>
                             <AccordionContent>
-                            Yes! Our In-Home Sparkle Parties and mobile Bracelet Bar can travel to your preferred location. Travel fees may apply for locations outside our standard service area. For Large Private Events and Corporate bookings, we're happy to discuss destination events and will provide a custom quote that includes any travel and accommodation costs.
+                            Yes! Our In-Home Sparkle Parties and mobile Bracelet Bar can travel to your preferred location. Travel fees may apply for locations outside our standard service area. For Large Private Events and Corporate bookings, we&apos;re happy to discuss destination events and will provide a custom quote that includes any travel and accommodation costs.
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-7">
