@@ -134,7 +134,7 @@ export default function Testimonials() {
                     </div>
                     <div className="max-w-[510px] mb-[5%]">
                         <p className={`text-[16px] tenor-font transition-all duration-500 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
-                            "{mainTestimonial?.review || ''}"
+                            &ldquo;{mainTestimonial?.review || ''}&rdquo;
                         </p>
                         <p className={`text-[14px] tenor-font text-[#B58E5A] mt-2 transition-all duration-500 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
                             - {mainTestimonial?.name || ''}
