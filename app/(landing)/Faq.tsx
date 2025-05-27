@@ -48,7 +48,7 @@ export default function Faq() {
                         <AccordionItem value="item-4">
                             <AccordionTrigger>Can I customize the jewelry experience for my guests?</AccordionTrigger>
                             <AccordionContent>
-                            Absolutely! Our custom welded jewelry can be personalized for each guest, and we offer personal styling consultation during the event. For Corporate and Large Private Events, we can incorporate your branding, create custom gift packaging, and even develop themed jewelry experiences that align with your event's purpose or company culture.
+                            Absolutely! Our custom welded jewelry can be personalized for each guest, and we offer personal styling consultation during the event. For Corporate and Large Private Events, we can incorporate your branding, create custom gift packaging, and even develop themed jewelry experiences that align with your event&apos;s purpose or company culture.
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-5">
