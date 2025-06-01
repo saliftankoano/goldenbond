@@ -41,10 +41,10 @@ export default function Founder() {
               <p className="tenor-font text-[17px] leading-[150%] text-[#4A4A4A]">
                 Golden Bond is about celebrating connections that spark meaning.
                 <br />
-                We're more than jewelry - we're an extension of your bond, your
-                story, your forever evolving story. Whether it's a statement, a
-                symbol, a milestone, or a moment worth holding onto - our
-                Bracelet Bar sparks the story.
+                We&apos;re more than jewelry - we&apos;re an extension of your
+                bond, your story, your forever evolving story. Whether it&apos;s
+                a statement, a symbol, a milestone, or a moment worth holding
+                onto - our Bracelet Bar sparks the story.
                 <br />
                 <br />
                 Golden Bond Jewelry creates custom-fit, welded permanent jewelry
