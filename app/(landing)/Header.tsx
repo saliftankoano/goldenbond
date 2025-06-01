@@ -52,7 +52,7 @@ export default function Header() {
 
     return (
         <>
-            <header className={`fixed top-0 left-0 right-0 z-50 px-6 py-4 transition-all duration-300 ${
+            <header className={`fixed top-0 left-0 right-0 z-50 px-6 transition-all duration-300 ${
                 isScrolled ? 'bg-[#F4F1EB] shadow-sm' : 'bg-transparent'
             }`}>
                 <nav className="flex items-center justify-between max-w-7xl mx-auto">
@@ -100,7 +100,7 @@ export default function Header() {
                         {/* Centered Logo */}
                         <div className="flex items-center hover:cursor-pointer">
                             <Image 
-                                src={isScrolled ? "/images/logo.svg" : "/images/logo-white.svg"} 
+                                src={isScrolled ? "/images/yellow-logo.svg" : "/images/logo-white.svg"} 
                                 alt="Golden Bond" 
                                 width={72} 
                                 height={71} 
