@@ -22,7 +22,13 @@ export default function Experience() {
                         <div className="first-event flex flex-col items-center justify-end pt-[65px]">
                             <div className="flex flex-col justify-end">
                                 <div className="w-[270px] h-[246px] relative">
-                                    <Image src="/images/experience/experience1.png" alt="Experience" fill className="object-cover" />
+                                    <Image 
+                                        src="/images/experience/experience1.png" 
+                                        alt="Experience" 
+                                        fill 
+                                        className="object-cover" 
+                                        sizes="270px"
+                                    />
                                 </div>
                                 <h2 className="title garamond-font text-[24px] leading-[25px] mt-[15px] w-[214px] h-[52px] ml-auto text-right">Gems & Glamour: A Jewelry Showcase</h2>
                             </div>
@@ -30,7 +36,13 @@ export default function Experience() {
                         <div className="second-event h-[50%] flex flex-col items-center justify-end">
                         <div className="flex flex-col justify-end">
                             <div className="w-[270px] h-[246px] relative">
-                                <Image src="/images/experience/experience3.png" alt="Experience" fill className="object-cover" />
+                                <Image 
+                                    src="/images/experience/experience3.png" 
+                                    alt="Experience" 
+                                    fill 
+                                    className="object-cover" 
+                                    sizes="270px"
+                                />
                             </div>
                             <h2 className="title garamond-font text-[24px] leading-[25px] mt-[15px] w-[214px] h-[52px] ml-auto text-right">Magic & Mystery: A Jewelry Showcase</h2>
                             </div>
@@ -40,7 +52,13 @@ export default function Experience() {
                         <div className="flex flex-col items-center justify-end z-10 pl-[15px]">
                             <div className="flex flex-col justify-end">
                                 <div className="w-[272px] h-[401px] relative">
-                                    <Image src="/images/experience/experience2.png" alt="Experience" fill className="object-cover" />
+                                    <Image 
+                                        src="/images/experience/experience2.png" 
+                                        alt="Experience" 
+                                        fill 
+                                        className="object-cover" 
+                                        sizes="272px"
+                                    />
                                 </div>
                                 <h2 className="title garamond-font text-[24px] leading-[25px] mt-[15px] w-[214px] h-[52px] ml-auto text-right">Sparkle & Shine Jewelry Showcase</h2>
                             </div>
