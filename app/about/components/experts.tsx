@@ -111,7 +111,7 @@ export default function Experts() {
         </div>
       </div>
       <div className="experts-container pt-[60px] w-full max-w-[1360px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center relative z-10">
-        {experts.map((expert, index) => (
+        {experts.map((expert) => (
           <ExpertCard
             key={expert.name}
             image={expert.image}
