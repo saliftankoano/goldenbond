@@ -1,15 +1,17 @@
-import Hero from "./(landing)/Hero";
-import Footer from "./(landing)/Footer";
-import Faq from "./(landing)/Faq";
-import Who from "./(landing)/Who";
-import Cta from "./(landing)/Cta";
-import Testimonials from "./(landing)/Testimonials";
-import Experience from "./(landing)/Experience";
-import Services from "./(landing)/Services";
+import Hero from "@/app/(landing)/Hero";
+import Footer from "@/app/(landing)/Footer";
+import Faq from "@/app/(landing)/Faq";
+import Who from "@/app/(landing)/Who";
+import Cta from "@/app/(landing)/Cta";
+import Testimonials from "@/app/(landing)/Testimonials";
+import Experience from "@/app/(landing)/Experience";
+import Services from "@/app/(landing)/Services";
+import Header from "@/app/(landing)/Header";
 
 export default function Home() {
   return (
     <div className="w-full h-full bg-[#F4F1EB]">
+      <Header />
       <Hero />
       <Services />
       <Experience />
