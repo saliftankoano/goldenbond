@@ -102,10 +102,12 @@ export default function Testimonials() {
     }
 
     return (
-        <section className="w-full bg-[#1B0E01] flex text-white py-[5%] px-[5%]">
-            <div className="w-[40%] h-full flex items-end gap-[30px]">
+        <section className="w-full bg-[#1B0E01] flex flex-col lg:flex-row text-white py-8 md:py-12 lg:py-[5%] px-4 md:px-6 lg:px-[5%]">
+            {/* Images Section */}
+            <div className="w-full lg:w-[40%] flex flex-col lg:flex-row items-center lg:items-end gap-4 lg:gap-[30px] mb-8 lg:mb-0">
+                {/* Left Small Image - Hidden on mobile, visible on tablet+ */}
                 <div 
-                    className="w-[150px] h-[220px] relative cursor-pointer transition-transform duration-500 hover:scale-105"
+                    className="hidden sm:block w-[120px] sm:w-[130px] lg:w-[150px] h-[180px] sm:h-[190px] lg:h-[220px] relative cursor-pointer transition-transform duration-500 hover:scale-105"
                     onClick={() => handleImageClick('left-small')}
                 >
                     <Image 
@@ -113,42 +115,53 @@ export default function Testimonials() {
                         alt="Previous testimonial" 
                         fill 
                         className={`object-cover transition-all duration-500 ${isTransitioning ? 'opacity-80' : 'opacity-100'}`} 
+                        sizes="(max-width: 640px) 120px, (max-width: 1024px) 130px, 150px"
                     />
                 </div>
-                <div className="w-[380px] h-[540px] relative">
+                
+                {/* Main Large Image */}
+                <div className="w-[280px] sm:w-[320px] lg:w-[380px] h-[400px] sm:h-[460px] lg:h-[540px] relative">
                     <Image 
                         src={mainTestimonial?.image || ''} 
                         alt={mainTestimonial?.name || ''} 
                         fill 
                         className={`object-cover transition-all duration-500 ${isTransitioning ? 'opacity-80' : 'opacity-100'}`} 
+                        sizes="(max-width: 640px) 280px, (max-width: 1024px) 320px, 380px"
                     />
                 </div>
             </div>
-            <div className="w-[60%] h-[540px]">
-                <div className="w-full h-[55%] pl-[40px]">
-                    <div className="heading-container">
-                        <h2 className="tenor-font text-[20px] h-[18px] font-semibold text-[#B58E5A] leading-[20%] mb-[12px] uppercase flex items-center">Testimonials</h2>
-                        <h1 className={`font-extrabold text-[32px] font-garamond mb-[2.5%] uppercase transition-all duration-500 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
+
+            {/* Content Section */}
+            <div className="w-full lg:w-[60%] lg:h-[540px] flex flex-col">
+                {/* Text Content */}
+                <div className="w-full flex-1 lg:h-[55%] lg:pl-[40px]">
+                    <div className="heading-container mb-6 lg:mb-0">
+                        <h2 className="tenor-font text-base lg:text-[20px] font-semibold text-[#B58E5A] leading-tight mb-3 lg:mb-[12px] uppercase">Testimonials</h2>
+                        <h1 className={`font-extrabold text-2xl sm:text-3xl lg:text-[32px] font-garamond mb-4 lg:mb-[2.5%] uppercase transition-all duration-500 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
                             {mainTestimonial?.title || ''}
                         </h1>
                     </div>
-                    <div className="max-w-[510px] mb-[5%]">
-                        <p className={`text-[16px] tenor-font transition-all duration-500 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
+                    <div className="max-w-full lg:max-w-[510px] mb-6 lg:mb-[5%]">
+                        <p className={`text-sm sm:text-base lg:text-[16px] tenor-font leading-relaxed transition-all duration-500 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
                             &ldquo;{mainTestimonial?.review || ''}&rdquo;
                         </p>
-                        <p className={`text-[14px] tenor-font text-[#B58E5A] mt-2 transition-all duration-500 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
+                        <p className={`text-xs sm:text-sm lg:text-[14px] tenor-font text-[#B58E5A] mt-2 transition-all duration-500 ${isTransitioning ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
                             - {mainTestimonial?.name || ''}
                         </p>
                     </div>
-                    <button className="max-w-[211px] h-[55px] py-[2.5%] px-[10%] bg-transparent border border-[#B58E5A] text-[16px] text-[#B58E5A] flex items-center justify-center uppercase hover:cursor-pointer hover:bg-[#B58E5A] hover:text-white transition-all duration-300">
+                    <button className="w-full sm:w-auto max-w-[211px] h-[55px] py-[2.5%] px-[10%] bg-transparent border border-[#B58E5A] text-sm sm:text-base lg:text-[16px] text-[#B58E5A] flex items-center justify-center uppercase hover:cursor-pointer hover:bg-[#B58E5A] hover:text-white transition-all duration-300">
                         <p>Explore</p>
                     </button>
                 </div>
-                <div className="w-full h-[45%] flex gap-[30px] pl-[40px] relative items-end">
+
+                {/* Bottom Images Gallery */}
+                <div className="w-full lg:h-[45%] flex flex-wrap sm:flex-nowrap gap-3 sm:gap-4 lg:gap-[30px] lg:pl-[40px] relative items-end mt-8 lg:mt-0 justify-center lg:justify-start">
                     {arrangement.filter(item => item.position.startsWith('right-')).map((item, index) => (
                         <div 
                             key={item.testimonial.id}
-                            className="w-[150px] h-[220px] relative cursor-pointer transition-transform duration-500 hover:scale-105"
+                            className={`w-[120px] sm:w-[130px] lg:w-[150px] h-[180px] sm:h-[190px] lg:h-[220px] relative cursor-pointer transition-transform duration-500 hover:scale-105 ${
+                                index >= 2 ? 'hidden sm:block' : ''
+                            } ${index >= 3 ? 'hidden lg:block' : ''}`}
                             onClick={() => handleImageClick(item.position)}
                         >
                             <Image 
@@ -156,10 +169,19 @@ export default function Testimonials() {
                                 alt={item.testimonial.name} 
                                 fill 
                                 className={`object-cover transition-all duration-500 ${isTransitioning ? 'opacity-80' : 'opacity-100'} ${index === 3 ? 'z-20' : 'z-10'}`} 
+                                sizes="(max-width: 640px) 120px, (max-width: 1024px) 130px, 150px"
                             />
                         </div>
                     ))}
-                    <Image src="/images/large-ellipse.svg" alt="large ellipse" width={257} height={257} className="absolute top-[-50px] right-[2px] transform -translate-y-1/2 z-0"/>
+                    
+                    {/* Decorative ellipse - only show on large screens */}
+                    <Image 
+                        src="/images/large-ellipse.svg" 
+                        alt="large ellipse" 
+                        width={257} 
+                        height={257} 
+                        className="hidden lg:block absolute top-[-50px] right-[2px] transform -translate-y-1/2 z-0"
+                    />
                 </div>
             </div>
         </section>
