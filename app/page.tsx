@@ -1,5 +1,5 @@
 import Hero from "@/app/(landing)/Hero";
-import Footer from "@/app/(landing)/Footer";
+import Footer from "@/app/components/Footer";
 import Faq from "@/app/(landing)/Faq";
 import Who from "@/app/(landing)/Who";
 import Cta from "@/app/(landing)/Cta";
