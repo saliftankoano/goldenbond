@@ -5,21 +5,9 @@ import Link from "next/link"
 import { useState, useEffect } from "react"
 import Image from "next/image"
 
-export default function Header() {
+export default function StaticHeader() {
     const [isEventsOpen, setIsEventsOpen] = useState(false)
-    const [isScrolled, setIsScrolled] = useState(false)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-    useEffect(() => {
-        const handleScroll = () => {
-            // Assuming hero section is roughly 100vh, adjust this value as needed
-            const heroHeight = window.innerHeight
-            setIsScrolled(window.scrollY > heroHeight * 0.8)
-        }
-
-        window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll)
-    }, [])
 
     // Close mobile menu when window is resized to desktop
     useEffect(() => {
@@ -52,19 +40,19 @@ export default function Header() {
 
     return (
         <>
-            <header className={`fixed top-0 left-0 right-0 z-50 px-6 transition-all duration-300 ${
-                isScrolled ? 'bg-[#F4F1EB] shadow-sm' : 'bg-transparent'
-            }`}>
+            <header className="relative bg-[#F4F1EB] shadow-sm px-4 md:px-6 py-4 lg:py-6">
                 <nav className="flex items-center justify-between max-w-7xl mx-auto">
                     {/* Mobile: Logo on left */}
                     <div className="flex items-center hover:cursor-pointer lg:hidden">
-                        <Image 
-                            src={isScrolled ? "/images/logo.svg" : "/images/logo-white.svg"} 
-                            alt="Golden Bond" 
-                            width={72} 
-                            height={71} 
-                            style={{ height: "auto" }}
-                        />
+                        <Link href="/">
+                            <Image 
+                                src="/images/logo.svg" 
+                                alt="Golden Bond" 
+                                width={72} 
+                                height={71}
+                                style={{ width: "auto", height: "auto" }}
+                            />
+                        </Link>
                     </div>
 
                     {/* Desktop Navigation Layout */}
@@ -73,25 +61,19 @@ export default function Header() {
                         <div className="flex items-center space-x-8 tenor-font">
                             <Link
                                 href="/about"
-                                className={`text-[16px] leading-[120%] font-light tracking-wider hover:text-amber-600 transition-colors ${
-                                    isScrolled ? 'text-[#B58E5A]' : 'text-white hover:text-amber-200'
-                                }`}
+                                className="text-[16px] leading-[120%] font-light tracking-wider text-[#B58E5A] hover:text-amber-600 transition-colors"
                             >
                                 ABOUT
                             </Link>
                             <Link
                                 href="/story-time"
-                                className={`text-[16px] leading-[120%] font-light tracking-wider hover:text-amber-600 transition-colors ${
-                                    isScrolled ? 'text-[#B58E5A]' : 'text-white hover:text-amber-200'
-                                }`}
+                                className="text-[16px] leading-[120%] font-light tracking-wider text-[#B58E5A] hover:text-amber-600 transition-colors"
                             >
                                 STORY TIME
                             </Link>
                             <Link
                                 href="/portfolio"
-                                className={`text-[16px] leading-[120%] font-light tracking-wider hover:text-amber-600 transition-colors ${
-                                    isScrolled ? 'text-[#B58E5A]' : 'text-white hover:text-amber-200'
-                                }`}
+                                className="text-[16px] leading-[120%] font-light tracking-wider text-[#B58E5A] hover:text-amber-600 transition-colors"
                             >
                                 PORTFOLIO
                             </Link>
@@ -99,13 +81,15 @@ export default function Header() {
 
                         {/* Centered Logo */}
                         <div className="flex items-center hover:cursor-pointer">
-                            <Image 
-                                src={isScrolled ? "/images/yellow-logo.svg" : "/images/logo-white.svg"} 
-                                alt="Golden Bond" 
-                                width={72} 
-                                height={71} 
-                                style={{ width: "auto", height: "auto" }}
-                            />
+                            <Link href="/">
+                                <Image 
+                                    src="/images/yellow-logo.svg" 
+                                    alt="Golden Bond" 
+                                    width={72} 
+                                    height={71}
+                                    style={{ width: "auto", height: "auto" }}
+                                />
+                            </Link>
                         </div>
 
                         {/* Right Navigation */}
@@ -114,9 +98,7 @@ export default function Header() {
                             <div className="relative">
                                 <button
                                     onClick={() => setIsEventsOpen(!isEventsOpen)}
-                                    className={`flex items-center space-x-1 text-[16px] leading-[120%] font-light tracking-wider hover:text-amber-600 transition-colors ${
-                                        isScrolled ? 'text-[#B58E5A]' : 'text-white hover:text-amber-200'
-                                    }`}
+                                    className="flex items-center space-x-1 text-[16px] leading-[120%] font-light tracking-wider text-[#B58E5A] hover:text-amber-600 transition-colors"
                                 >
                                     <span>EVENTS</span>
                                     <ChevronDown className={`w-4 h-4 transition-transform ${isEventsOpen ? "rotate-180" : ""}`} />
@@ -124,7 +106,7 @@ export default function Header() {
 
                                 {/* Dropdown Menu */}
                                 {isEventsOpen && (
-                                    <div className="absolute top-full right-0 mt-2 w-48 bg-[#F4F1EB] backdrop-blur-sm border border-amber-200/20 shadow-lg">
+                                    <div className="absolute top-full right-0 mt-2 w-48 bg-[#F4F1EB] backdrop-blur-sm border border-amber-200/20 shadow-lg z-50">
                                         <div className="py-2 uppercase tenor-font">
                                             <Link
                                                 href="/events/corporate"
@@ -157,29 +139,23 @@ export default function Header() {
 
                             <Link
                                 href="/education"
-                                className={`text-[16px] leading-[120%] font-light tracking-wider hover:text-amber-600 transition-colors ${
-                                    isScrolled ? 'text-[#B58E5A]' : 'text-white hover:text-amber-200'
-                                }`}
+                                className="text-[16px] leading-[120%] font-light tracking-wider text-[#B58E5A] hover:text-amber-600 transition-colors"
                             >
                                 EDUCATION
                             </Link>
                             <Link
                                 href="/contact"
-                                className={`text-[16px] leading-[120%] font-light tracking-wider hover:text-amber-600 transition-colors ${
-                                    isScrolled ? 'text-[#B58E5A]' : 'text-white hover:text-amber-200'
-                                }`}
+                                className="text-[16px] leading-[120%] font-light tracking-wider text-[#B58E5A] hover:text-amber-600 transition-colors"
                             >
                                 CONTACT
                             </Link>
                         </div>
                     </div>
 
-                    {/* Mobile Hamburger Menu - Visible on mobile only */}
+                    {/* Mobile Hamburger Menu */}
                     <button
                         onClick={() => setIsMobileMenuOpen(true)}
-                        className={`lg:hidden p-2 transition-colors ${
-                            isScrolled ? 'text-[#B58E5A]' : 'text-white'
-                        }`}
+                        className="lg:hidden p-2 text-[#B58E5A] transition-colors"
                         aria-label="Open menu"
                     >
                         <Menu size={24} />
@@ -195,13 +171,15 @@ export default function Header() {
                 <div className="fixed inset-0 z-[60] bg-[#F4F1EB] flex flex-col">
                     {/* Header with logo and close button */}
                     <div className="flex items-center justify-between p-6">
-                        <Image 
-                            src="/images/logo.svg" 
-                            alt="Golden Bond" 
-                            width={60} 
-                            height={59} 
-                            style={{ width: "auto", height: "auto" }}
-                        />
+                        <Link href="/">
+                            <Image 
+                                src="/images/logo.svg" 
+                                alt="Golden Bond" 
+                                width={60} 
+                                height={59} 
+                                style={{ width: "auto", height: "auto" }}
+                            />
+                        </Link>
                         <button
                             onClick={closeMobileMenu}
                             className="p-2 text-[#B58E5A]"
@@ -302,4 +280,4 @@ export default function Header() {
             )}
         </>
     )
-}
+} 
