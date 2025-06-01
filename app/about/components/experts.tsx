@@ -64,7 +64,7 @@ export default function Experts() {
   ];
 
   return (
-    <section className="experts-section w-screen h-[750px] md:h-[850px] lg:h-[950px] bg-[#1B0E01] flex flex-col justify-center items-center relative py-[60px] md:py-[80px] lg:py-[100px] px-6 sm:px-8 md:px-12 lg:px-0 pb-[80px] md:pb-[100px] lg:pb-[120px]">
+    <section className="experts-section w-screen h-[750px] md:h-[850px] lg:h-[950px] bg-[#1B0E01] flex flex-col justify-center items-center relative py-[60px] md:py-[80px] lg:py-[100px] px-6 sm:px-8 md:px-12 lg:px-0 pb-[80px] md:pb-[100px] lg:pb-[120px] overflow-hidden">
       {/* Small Ellipse - Upper Left */}
       <Image
         src="/images/small-ellipse.svg"

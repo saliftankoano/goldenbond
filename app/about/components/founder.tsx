@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Founder() {
   return (
-    <section className="founder-section w-screen min-h-[700px] md:min-h-[850px] lg:h-[992px] bg-[#F4F1EB] flex flex-col justify-center items-center pb-[40px] md:pb-[60px] lg:pb-[78px] px-4 md:px-8 lg:px-0">
+    <section className="founder-section w-screen min-h-[700px] md:min-h-[850px] lg:h-[992px] bg-[#F4F1EB] flex flex-col justify-center items-center pb-[40px] md:pb-[60px] lg:pb-[78px] px-4 md:px-8 lg:px-0 overflow-hidden">
       <div className="intro w-full max-w-[674px] pb-[40px] md:pb-[50px] lg:pb-[62px] pt-[20px] flex flex-col justify-center items-center">
         <div className="w-auto text-center">
           <h2 className="tenor-font text-[14px] md:text-[15px] lg:text-[16px] leading-[120%] text-[#B58E5A]">
