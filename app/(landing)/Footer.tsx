@@ -65,5 +65,3 @@ export default function Footer() {
     </footer>
   );
 }
-
-{/* Ensure responsive design for footer on mobile and tablet */}
