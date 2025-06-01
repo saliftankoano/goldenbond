@@ -4,58 +4,61 @@ import Image from "next/image";
 
 export default function CTA() {
   return (
-    <section className="cta-section bg-[#F4F1EB] w-screen h-[736px] flex flex-col justify-center items-center relative pb-[72px]">
-      <div className="top-spacer w-full h-[72px]"></div>
-      {/* Small Ellipse - Bottom Right */}
+    <section className="cta-section bg-[#F4F1EB] w-screen min-h-[600px] md:min-h-[700px] lg:h-[736px] flex flex-col justify-center items-center relative py-[40px] md:py-[60px] lg:py-[72px] px-4 md:px-8 lg:px-0">
+      {/* Small Ellipse - Bottom Right - Hidden on mobile */}
       <Image
         src="/images/small-ellipse.svg"
         alt="decorative ellipse"
         width={131}
         height={131}
-        className="absolute bottom-[100px] right-[40px] w-[131px] h-[131px] z-20"
+        className="hidden md:block absolute bottom-[80px] md:bottom-[90px] lg:bottom-[100px] right-[30px] md:right-[35px] lg:right-[40px] w-[100px] h-[100px] md:w-[115px] md:h-[115px] lg:w-[131px] lg:h-[131px] z-20"
       />
 
-      <div className="title-container w-[816px] h-[68px] relative z-10">
-        <p className="text-[48px] leading-[120px] kaisei-font">
+      <div className="title-container w-full max-w-[320px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-[816px] relative z-10 text-center mb-[30px] md:mb-[50px] lg:mb-[64px]">
+        <p className="text-[24px] sm:text-[32px] md:text-[38px] lg:text-[42px] xl:text-[48px] leading-[120%] kaisei-font">
           The Golden Bond | Event & Design
         </p>
       </div>
-      <div className="cta-content w-[1284px] h-[407px] flex mt-[64px] relative z-10 mb-[72px]">
-        {/* Large Ellipse - Bottom Left */}
+
+      <div className="cta-content w-full max-w-[1284px] flex flex-col lg:flex-row relative z-10 gap-8 lg:gap-0">
+        {/* Large Ellipse - Bottom Left - Hidden on mobile */}
         <Image
           src="/images/small-ellipse.svg"
           alt="decorative ellipse"
           width={188}
           height={188}
-          className="absolute bottom-[-80px] left-[-20px] w-[188px] h-[188px] z-0"
+          className="hidden md:block absolute bottom-[-60px] md:bottom-[-70px] lg:bottom-[-80px] left-[-15px] md:left-[-18px] lg:left-[-20px] w-[140px] h-[140px] md:w-[160px] md:h-[160px] lg:w-[188px] lg:h-[188px] z-0"
         />
 
-        <div className="left-side mr-[154px]">
-          <div className="left-content w-[435px] h-[243px]">
-            <div className="w-full h-[76px]">
-              <h1 className="garamond-font text-[42px] font-extrabold leading-[120%]">
+        <div className="left-side w-full lg:w-auto lg:mr-[154px] mb-8 lg:mb-0">
+          <div className="left-content w-full max-w-[435px] mx-auto lg:mx-0">
+            <div className="w-full mb-6 md:mb-8 lg:mb-[62px]">
+              <h1 className="garamond-font text-[28px] sm:text-[32px] md:text-[36px] lg:text-[42px] font-extrabold leading-[120%] text-center lg:text-left">
                 Reserve Your Exquisite Jewelry Experience!
               </h1>
             </div>
-            <div className="w-full h-[42px] mt-[62px]">
-              <p className="tenor-font text-[14px] leading-[150%] text-[#4A4A4A]">
+            <div className="w-full mb-6 md:mb-8 lg:mb-[32px]">
+              <p className="tenor-font text-[14px] md:text-[15px] lg:text-[14px] leading-[150%] text-[#4A4A4A] text-center lg:text-left">
                 Molestias ut tenetur eos placeat aliquam quaerat cumque. Quis
                 autem id sed doloribus eos et enim et dolor.
               </p>
             </div>
-            <div className="w-full h-[61px]">
-              <button className="w-full uppercase sm:w-auto max-w-[211px] max-h-[61px] h-[55px] mt-[32px] px-[10%] bg-[#B58E5A] text-sm sm:text-base lg:text-[16px] text-white flex items-center justify-center font-semibold hover:cursor-pointer hover:bg-[#B58E5A]/80 hover:text-white transition-all duration-300">
+            <div className="w-full flex justify-center lg:justify-start">
+              <button className="w-full sm:w-auto min-w-[240px] lg:min-w-[211px] h-[50px] md:h-[55px] px-[8%] md:px-[10%] bg-[#B58E5A] text-sm sm:text-base lg:text-[16px] text-white flex items-center justify-center font-semibold hover:cursor-pointer hover:bg-[#B58E5A]/80 hover:text-white transition-all duration-300 uppercase">
                 <p className="whitespace-nowrap">Plan My Event</p>
               </button>
             </div>
           </div>
         </div>
-        <div className="right-side w-[695px] h-[407px] relative z-0">
+
+        <div className="right-side w-full lg:w-[695px] h-[300px] sm:h-[400px] md:h-[450px] lg:h-[407px] relative z-0 mx-4 lg:mx-0">
           <Image
             src="/images/about/cta.jpg"
-            alt="Smilling employee"
+            alt="Smiling employee"
             fill
-            className="object-cover z-0"
+            className="object-cover z-0 rounded-lg lg:rounded-none"
+            sizes="(max-width: 640px) 90vw, (max-width: 768px) 80vw, (max-width: 1024px) 70vw, 695px"
+            priority
           />
         </div>
       </div>
