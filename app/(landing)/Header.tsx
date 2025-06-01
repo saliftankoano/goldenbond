@@ -63,6 +63,7 @@ export default function Header() {
                             alt="Golden Bond" 
                             width={72} 
                             height={71} 
+                            style={{ width: "auto", height: "auto" }}
                         />
                     </div>
 
@@ -103,6 +104,7 @@ export default function Header() {
                                 alt="Golden Bond" 
                                 width={72} 
                                 height={71} 
+                                style={{ width: "auto", height: "auto" }}
                             />
                         </div>
 
@@ -198,6 +200,7 @@ export default function Header() {
                             alt="Golden Bond" 
                             width={60} 
                             height={59} 
+                            style={{ width: "auto", height: "auto" }}
                         />
                         <button
                             onClick={closeMobileMenu}
