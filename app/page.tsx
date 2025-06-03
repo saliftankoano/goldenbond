@@ -1,6 +1,6 @@
 import Hero from "@/app/(landing)/Hero";
 import Footer from "@/app/components/Footer";
-import Faq from "@/app/(landing)/Faq";
+import Faq from "@/app/components/Faq";
 import Who from "@/app/(landing)/Who";
 import Cta from "@/app/components/Cta";
 import Testimonials from "@/app/components/Testimonials";
