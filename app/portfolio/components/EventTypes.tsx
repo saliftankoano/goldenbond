@@ -73,7 +73,7 @@ export default function EventTypes() {
           {eventCards.map((card, index) => (
             <div
               key={index}
-              className="event-card w-full max-w-[320px] sm:max-w-[350px] md:max-w-[600px] lg:w-[640px] xl:w-[640px] h-[350px] sm:h-[380px] md:h-[420px] lg:h-[453px] xl:h-[453px] relative shadow-md hover:shadow-lg transition-shadow duration-300"
+              className="event-card w-full max-w-[320px] sm:max-w-[350px] md:max-w-[600px] lg:w-[640px] xl:w-[640px] h-[350px] sm:h-[380px] md:h-[420px] lg:h-[453px] xl:h-[453px] relative shadow-md hover:shadow-lg transition-shadow duration-300 group cursor-pointer"
             >
               <Image
                 src={card.image}
@@ -82,8 +82,18 @@ export default function EventTypes() {
                 className="object-cover"
                 sizes="(max-width: 640px) 320px, (max-width: 768px) 350px, (max-width: 1024px) 600px, 640px"
               />
-              <div className="absolute inset-0 bg-[#1B0E01]/52"></div>
-              <div className="card-content absolute inset-0 p-3 sm:p-4 md:p-5 lg:p-6 xl:p-6 flex flex-col justify-end z-10">
+              {/* Default overlay */}
+              <div className="absolute inset-0 bg-[#1B0E01]/52 transition-opacity duration-300 group-hover:opacity-0"></div>
+
+              {/* Hover overlay with darker background */}
+              <div className="absolute inset-0 bg-[#1B0E01]/75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <button className="bg-[#B58E5A] hover:bg-[#B58E5A]/80 text-white font-semibold px-6 lg:px-8 py-3 lg:py-4 text-[14px] lg:text-[16px] leading-[18px] sm:leading-[19px] uppercase tenor-font transition-colors duration-300 hover:shadow-md">
+                  EXPLORE {card.category.toUpperCase()}
+                </button>
+              </div>
+
+              {/* Default content - visible when not hovering */}
+              <div className="card-content absolute inset-0 p-3 sm:p-4 md:p-5 lg:p-6 xl:p-6 flex flex-col justify-end z-10 transition-opacity duration-300 group-hover:opacity-0">
                 <div className="card-content-inner mb-2 sm:mb-3 lg:mb-4">
                   <h3 className="text-[#B58E5A] tenor-font font-semibold text-[11px] sm:text-[12px] lg:text-[13px] xl:text-[14px] leading-[18px] sm:leading-[20px] mb-1 sm:mb-2 tracking-[0.25px] uppercase">
                     {card.category}
