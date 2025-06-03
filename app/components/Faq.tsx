@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export default function Faq() {
   return (
-    <section className="w-full min-h-screen relative overflow-hidden py-12 md:py-16 lg:py-20">
+    <section className="w-full bg-[#F4F1EB] min-h-screen relative overflow-hidden py-12 md:py-16 lg:py-20">
       {/* Header Section */}
       <div className="header flex flex-col items-center justify-center pt-8 md:pt-12 lg:pt-[15vh] relative px-4">
         <div className="header mb-2">
