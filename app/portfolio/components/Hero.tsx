@@ -21,7 +21,7 @@ export default function PortfolioHero() {
           Explore our wide variety of past work
         </p>
         <div className="btn-container flex justify-center mt-2 sm:mt-1 md:mt-0">
-          <button className="w-full sm:w-auto min-w-[200px] sm:min-w-[220px] md:min-w-[240px] lg:min-w-[260px] xl:min-w-[211px] h-[45px] sm:h-[48px] md:h-[52px] lg:h-[58px] xl:h-[61px] bg-[#B58E5A] text-white text-[14px] sm:text-[15px] md:text-base lg:text-lg xl:text-[19px] font-semibold tenor-font hover:bg-[#B58E5A]/90 transition-colors duration-300 whitespace-nowrap px-4 sm:px-6">
+          <button className="w-full sm:w-auto min-w-[200px] sm:min-w-[220px] md:min-w-[240px] lg:min-w-[260px] xl:min-w-[211px] h-[45px] sm:h-[48px] md:h-[52px] lg:h-[58px] xl:h-[61px] bg-[#B58E5A] text-white text-[14px] sm:text-[15px] md:text-base lg:text-lg xl:text-[19px] font-semibold tenor-font hover:bg-[#B58E5A]/90 hover:cursor-pointer transition-colors duration-300 whitespace-nowrap px-4 sm:px-6">
             Plan My Event
           </button>
         </div>
