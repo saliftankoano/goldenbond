@@ -2,7 +2,7 @@ import Hero from "@/app/(landing)/Hero";
 import Footer from "@/app/components/Footer";
 import Faq from "@/app/(landing)/Faq";
 import Who from "@/app/(landing)/Who";
-import Cta from "@/app/(landing)/Cta";
+import Cta from "@/app/components/Cta";
 import Testimonials from "@/app/components/Testimonials";
 import Experience from "@/app/(landing)/Experience";
 import Services from "@/app/(landing)/Services";
