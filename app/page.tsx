@@ -3,7 +3,7 @@ import Footer from "@/app/components/Footer";
 import Faq from "@/app/(landing)/Faq";
 import Who from "@/app/(landing)/Who";
 import Cta from "@/app/(landing)/Cta";
-import Testimonials from "@/app/(landing)/Testimonials";
+import Testimonials from "@/app/components/Testimonials";
 import Experience from "@/app/(landing)/Experience";
 import Services from "@/app/(landing)/Services";
 import Header from "@/app/(landing)/Header";
