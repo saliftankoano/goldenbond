@@ -4,3 +4,4 @@ Next Steps:
 - [x] Add article content section
 - [x] Add singular Brown Testimonial On article
 - [x] Fix hero landing header spacing inconsistency to resemble staticHeader
+- [] Add portfolio category page
