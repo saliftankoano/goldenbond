@@ -13,6 +13,7 @@ interface EventCard {
 
 export default function Gallery() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxClosing, setLightboxClosing] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // Sample data arranged by column pattern:
@@ -102,14 +103,20 @@ export default function Gallery() {
   // Handle opening lightbox
   const openLightbox = (index: number) => {
     setCurrentImageIndex(index);
+    setLightboxClosing(false);
     setLightboxOpen(true);
     document.body.style.overflow = "hidden"; // Prevent background scroll
   };
 
-  // Handle closing lightbox
+  // Handle closing lightbox with smooth animation
   const closeLightbox = () => {
-    setLightboxOpen(false);
-    document.body.style.overflow = "unset"; // Restore background scroll
+    setLightboxClosing(true);
+    // Delay the actual closing to allow animation to complete
+    setTimeout(() => {
+      setLightboxOpen(false);
+      setLightboxClosing(false);
+      document.body.style.overflow = "unset"; // Restore background scroll
+    }, 300); // 300ms matches the transition duration
   };
 
   // Navigate to previous image
@@ -142,7 +149,7 @@ export default function Gallery() {
 
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [lightboxOpen]);
+  }, [lightboxOpen, goToPrevious, goToNext]);
 
   // Cleanup on unmount
   useEffect(() => {
@@ -259,14 +266,20 @@ export default function Gallery() {
 
       {/* Lightbox Overlay */}
       {lightboxOpen && (
-        <div className="fixed inset-0 bg-transparent backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div
+          className={`fixed inset-0 bg-transparent backdrop-blur-sm z-50 flex items-center justify-center p-4 transition-all duration-300 ease-out ${
+            lightboxClosing ? "opacity-0 backdrop-blur-none" : "opacity-100"
+          }`}
+        >
           {/* Close Button */}
           <button
             onClick={(e) => {
               e.stopPropagation();
               closeLightbox();
             }}
-            className="absolute top-4 right-4 sm:top-6 sm:right-6 text-white hover:text-gray-200 transition-colors duration-200 z-10 bg-[#B58E5A] bg-opacity-80 rounded-full p-3"
+            className={`absolute hover:cursor-pointer top-4 right-4 sm:top-6 sm:right-6 text-white hover:text-gray-200 transition-all duration-200 z-10 bg-[#B58E5A] bg-opacity-80 rounded-full p-3 ${
+              lightboxClosing ? "scale-90 opacity-0" : "scale-100 opacity-100"
+            }`}
             aria-label="Close lightbox"
           >
             <svg
@@ -291,7 +304,9 @@ export default function Gallery() {
               e.stopPropagation();
               goToPrevious();
             }}
-            className="absolute left-4 sm:left-8 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-200 transition-colors duration-200 z-10 bg-[#B58E5A] bg-opacity-80 rounded-full p-3"
+            className={`absolute hover:cursor-pointer left-4 sm:left-8 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-200 transition-all duration-200 z-10 bg-[#B58E5A] bg-opacity-80 rounded-full p-3 ${
+              lightboxClosing ? "scale-90 opacity-0" : "scale-100 opacity-100"
+            }`}
             aria-label="Previous image"
           >
             <svg
@@ -315,7 +330,9 @@ export default function Gallery() {
               e.stopPropagation();
               goToNext();
             }}
-            className="absolute right-4 sm:right-8 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-200 transition-colors duration-200 z-10 bg-[#B58E5A] bg-opacity-80 rounded-full p-3"
+            className={`absolute hover:cursor-pointer right-4 sm:right-8 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-200 transition-all duration-200 z-10 bg-[#B58E5A] bg-opacity-80 rounded-full p-3 ${
+              lightboxClosing ? "scale-90 opacity-0" : "scale-100 opacity-100"
+            }`}
             aria-label="Next image"
           >
             <svg
@@ -335,7 +352,9 @@ export default function Gallery() {
 
           {/* Main Image */}
           <div
-            className="relative max-w-[90vw] max-h-[80vh] w-full h-full flex items-center justify-center"
+            className={`relative max-w-[90vw] max-h-[80vh] w-full h-full flex items-center justify-center transition-all duration-300 ease-out ${
+              lightboxClosing ? "scale-95 opacity-0" : "scale-100 opacity-100"
+            }`}
             onClick={(e) => e.stopPropagation()}
           >
             <Image
@@ -349,7 +368,11 @@ export default function Gallery() {
           </div>
 
           {/* Image Counter */}
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm sm:text-base bg-black bg-opacity-30 px-3 py-1 rounded-full">
+          <div
+            className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm sm:text-base bg-black bg-opacity-30 px-3 py-1 rounded-full transition-all duration-200 ${
+              lightboxClosing ? "scale-90 opacity-0" : "scale-100 opacity-100"
+            }`}
+          >
             {currentImageIndex + 1} / {events.length}
           </div>
 
