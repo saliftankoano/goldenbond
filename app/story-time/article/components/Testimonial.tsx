@@ -26,11 +26,11 @@ export default function Testimonial() {
             Julia
           </h1>
           <div className="mt-[16px] sm:mt-[20px] lg:mt-[24px] text-white/90 text-[14px] sm:text-[15px] lg:text-[16px] leading-[140%] sm:leading-[145%] lg:leading-[150%] tenor-font">
-            "I had the pleasure of attending a Story Time event at Golden Bond
-            Studio, and it was truly a magical experience. The atmosphere was
-            warm and inviting, and the stories shared by the curator were
+            &ldquo;I had the pleasure of attending a Story Time event at Golden
+            Bond Studio, and it was truly a magical experience. The atmosphere
+            was warm and inviting, and the stories shared by the curator were
             absolutely captivating. I left feeling inspired and enlightened, and
-            I can't wait to attend another event in the future."
+            I can&rsquo;t wait to attend another event in the future.&rdquo;
           </div>
           <button className="w-full sm:w-auto mt-[24px] sm:mt-[28px] lg:mt-[32px] min-w-[200px] sm:min-w-[220px] md:min-w-[240px] lg:min-w-[260px] xl:min-w-[211px] h-[45px] sm:h-[48px] md:h-[52px] lg:h-[58px] xl:h-[61px] bg-[#B58E5A] text-white text-[14px] sm:text-[15px] md:text-base lg:text-lg xl:text-[19px] font-semibold tenor-font hover:bg-[#B58E5A]/90 hover:cursor-pointer transition-colors duration-300 whitespace-nowrap px-4 sm:px-6">
             Plan My Event
