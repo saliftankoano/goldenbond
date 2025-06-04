@@ -13,17 +13,25 @@ export default function Hero() {
         sizes="100vw"
         priority
       />
-      <div className="hero-content absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-[320px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-[850px] xl:max-w-[942px] px-4 sm:px-6 md:px-8 lg:px-4 xl:px-0 flex flex-col justify-center items-center">
-        <h1 className="text-[28px] xs:text-[32px] sm:text-[42px] md:text-[52px] lg:text-[62px] xl:text-[70px] garamond-font leading-[110%] sm:leading-[115%] lg:leading-[120%] font-bold text-white uppercase text-center">
-          Golden Bond Story Time
+      <div className="hero-content absolute inset-0 flex flex-col justify-center max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-6 xl:px-0">
+        {/* Breadcrumb */}
+        <div className="mb-4 md:mb-6">
+          <p className="text-white/80 tenor-font text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] leading-[120%] tracking-wider uppercase">
+            GOLDEN BOND STORY TIME / WHY GB IS THE ULTIMATE BACHELORETTE PARTY
+            DESTINATION
+          </p>
+        </div>
+
+        {/* Main Title */}
+        <h1 className="text-[32px] sm:text-[42px] md:text-[52px] lg:text-[62px] xl:text-[70px] garamond-font leading-[110%] sm:leading-[115%] lg:leading-[120%] font-bold text-white mb-4 md:mb-6 max-w-[800px]">
+          Why GB is the Ultimate Bachelorette Party Destination
         </h1>
-        <p className="text-white tenor-font my-[12px] sm:my-[16px] md:my-[18px] lg:my-[22px] xl:my-[24px] text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px] leading-[130%] sm:leading-[125%] lg:leading-[120%] text-center max-w-[280px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px]">
-          Golden Bond is about celebrating connections that spark meaning.
-        </p>
-        <div className="btn-container flex justify-center mt-2 sm:mt-1 md:mt-0">
-          <button className="w-full sm:w-auto min-w-[200px] sm:min-w-[220px] md:min-w-[240px] lg:min-w-[260px] xl:min-w-[211px] h-[45px] sm:h-[48px] md:h-[52px] lg:h-[58px] xl:h-[61px] bg-[#B58E5A] text-white text-[14px] sm:text-[15px] md:text-base lg:text-lg xl:text-[19px] font-semibold tenor-font hover:bg-[#B58E5A]/90 transition-colors duration-300 whitespace-nowrap px-4 sm:px-6">
-            Plan My Event
-          </button>
+
+        {/* Date */}
+        <div>
+          <p className="text-white tenor-font text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px] leading-[120%]">
+            21/02/2025
+          </p>
         </div>
       </div>
     </section>
