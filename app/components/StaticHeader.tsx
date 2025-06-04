@@ -40,7 +40,7 @@ export default function StaticHeader() {
 
   return (
     <>
-      <header className="relative h-[105px] bg-[#F4F1EB] px-4 md:px-6 py-2 lg:py-3">
+      <header className="relative h-[105px] max-h-[105px] bg-[#F4F1EB] px-4 md:px-6 py-2 lg:py-3">
         <nav className="flex items-center justify-between max-w-7xl mx-auto">
           {/* Mobile: Logo on left */}
           <div className="flex items-center hover:cursor-pointer lg:hidden">
