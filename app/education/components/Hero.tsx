@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import WaitlistOverlay from "./WaitlistOverlay";
 
 export default function Hero() {
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
@@ -12,6 +13,11 @@ export default function Hero() {
 
   const closeOverlay = () => {
     setIsOverlayOpen(false);
+  };
+
+  const handleBeginJourney = () => {
+    // TODO: Implement next sequence after "Begin Journey" button is clicked
+    console.log("Begin Journey clicked - next sequence will be added here");
   };
 
   return (
@@ -38,161 +44,19 @@ export default function Hero() {
           <div className="btn-container flex justify-center mt-[24px] sm:mt-[32px] md:mt-[40px] lg:mt-[44px] xl:mt-[48px]">
             <button
               onClick={openOverlay}
-              className="w-full sm:w-auto min-w-[200px] sm:min-w-[220px] md:min-w-[240px] lg:min-w-[260px] xl:min-w-[211px] h-[45px] sm:h-[48px] md:h-[52px] lg:h-[58px] xl:h-[61px] bg-[#B58E5A] text-white text-[14px] sm:text-[15px] md:text-base lg:text-lg xl:text-[19px] font-semibold tenor-font hover:bg-[#B58E5A]/90 hover:scale-95 hover:cursor-pointer transition-all duration-300 ease-in-out transform whitespace-nowrap px-4 sm:px-6"
+              className="uppercase w-full sm:w-auto min-w-[200px] sm:min-w-[220px] md:min-w-[240px] lg:min-w-[260px] xl:min-w-[211px] h-[45px] sm:h-[48px] md:h-[52px] lg:h-[58px] xl:h-[61px] bg-[#B58E5A] text-white text-[14px] sm:text-[15px] md:text-base lg:text-lg xl:text-[19px] font-semibold tenor-font hover:bg-[#B58E5A]/90 hover:scale-95 hover:cursor-pointer transition-all duration-300 ease-in-out transform whitespace-nowrap px-4 sm:px-6"
             >
               Join the waitlist
             </button>
           </div>
         </div>
 
-        {/* Overlay - Limited to Hero Section */}
-        {isOverlayOpen && (
-          <div className="absolute inset-0 z-50">
-            {/* Backdrop */}
-            <div
-              className="absolute inset-0 bg-transparent backdrop-blur-sm animate-fade-in"
-              onClick={closeOverlay}
-            ></div>
-
-            {/* Modal Content - Hero Section Only */}
-            <div className="relative w-full h-full bg-[#1B0E01]/70 animate-scale-in overflow-y-auto">
-              {/* Close Button */}
-              <button
-                onClick={closeOverlay}
-                className="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center bg-white/80 hover:bg-white/90 rounded-full transition-colors duration-200 backdrop-blur-sm"
-              >
-                <svg
-                  className="w-5 h-5 text-gray-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-
-              {/* Modal Header */}
-              <div className="px-6 py-8 sm:px-8 md:px-12 lg:px-16 xl:px-20 text-center min-h-screen flex flex-col justify-center items-center">
-                <div className="w-full max-w-7xl mx-auto p-8 sm:p-12 md:p-16">
-                  <h2 className="garamond-font text-[28px] sm:text-[32px] md:text-[40px] lg:text-[48px] xl:text-[56px] text-center text-white uppercase tracking-wide mb-6 drop-shadow-lg">
-                    JOIN THE WAITLIST
-                  </h2>
-                  <p className="tenor-font text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-center text-white max-w-[800px] mx-auto leading-relaxed mb-8 drop-shadow-md">
-                    Master the craft and business of permanent jewelry with our
-                    comprehensive training programs—available{" "}
-                    <span className="underline">online</span>,{" "}
-                    <span className="underline">in-person</span>, or{" "}
-                    <span className="underline">hybrid</span> to fit your needs.
-                    Whether you're an individual entrepreneur or a team looking
-                    to expand your skills, we provide hands-on, expert-led
-                    education to help you succeed.
-                  </p>
-
-                  {/* Begin Journey Button */}
-                  <button className="mt-8 px-8 py-3 bg-[#B58E5A] hover:bg-[#B58E5A]/90 text-white font-semibold tenor-font transition-colors duration-300 flex items-center gap-2 mx-auto mb-12 drop-shadow-lg">
-                    BEGIN THE JOURNEY
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </button>
-
-                  {/* Image Gallery */}
-                  <div className="relative w-full flex justify-center">
-                    {/* Large Ellipse - Left Side */}
-                    <div className="absolute -left-32 top-8 w-[257px] h-[257px] z-0">
-                      <Image
-                        src="/images/large-ellipse.svg"
-                        alt=""
-                        width={257}
-                        height={257}
-                        className="opacity-60"
-                      />
-                    </div>
-
-                    {/* Small Ellipse - Right Side */}
-                    <div className="absolute -right-20 top-16 w-[153px] h-[153px] z-0">
-                      <Image
-                        src="/images/small-ellipse.svg"
-                        alt=""
-                        width={153}
-                        height={153}
-                        className="opacity-60"
-                      />
-                    </div>
-
-                    {/* Images Container */}
-                    <div className="flex justify-center items-center gap-[17.5px] relative z-10">
-                      {/* Image 1 - Business/Planning */}
-                      <div className="relative w-[250px] h-[256px] overflow-hidden drop-shadow-lg flex-shrink-0">
-                        <Image
-                          src="/images/education/nice-showcase.jpg"
-                          alt="Business planning and jewelry design"
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-
-                      {/* Image 2 - Jewelry on Hand */}
-                      <div className="relative w-[250px] h-[256px] overflow-hidden drop-shadow-lg flex-shrink-0">
-                        <Image
-                          src="/images/education/model-jewel.jpg"
-                          alt="Permanent jewelry on hand with flowers"
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-
-                      {/* Image 3 - Welding Process */}
-                      <div className="relative w-[250px] h-[256px] overflow-hidden drop-shadow-lg flex-shrink-0">
-                        <Image
-                          src="/images/education/pop-up.jpg"
-                          alt="Jewelry welding process"
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-
-                      {/* Image 4 - Students/Instructors */}
-                      <div className="relative w-[250px] h-[256px] overflow-hidden drop-shadow-lg flex-shrink-0">
-                        <Image
-                          src="/images/education/education.webp"
-                          alt="Students and instructors"
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-
-                      {/* Image 5 - Training Badge */}
-                      <div className="relative w-[250px] h-[256px] overflow-hidden drop-shadow-lg flex-shrink-0">
-                        <Image
-                          src="/images/education/course.webp"
-                          alt="Students and instructors"
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
+        {/* Waitlist Overlay Component */}
+        <WaitlistOverlay
+          isOpen={isOverlayOpen}
+          onClose={closeOverlay}
+          onBeginJourney={handleBeginJourney}
+        />
       </section>
 
       {/* Custom Animations */}
