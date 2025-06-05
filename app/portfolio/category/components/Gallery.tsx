@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 interface EventCard {
   id: number;
@@ -120,14 +120,14 @@ export default function Gallery() {
   };
 
   // Navigate to previous image
-  const goToPrevious = () => {
+  const goToPrevious = useCallback(() => {
     setCurrentImageIndex((prev) => (prev === 0 ? events.length - 1 : prev - 1));
-  };
+  }, [events.length]);
 
   // Navigate to next image
-  const goToNext = () => {
+  const goToNext = useCallback(() => {
     setCurrentImageIndex((prev) => (prev === events.length - 1 ? 0 : prev + 1));
-  };
+  }, [events.length]);
 
   // Keyboard navigation
   useEffect(() => {
