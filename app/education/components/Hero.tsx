@@ -3,21 +3,31 @@
 import Image from "next/image";
 import { useState } from "react";
 import WaitlistOverlay from "./WaitlistOverlay";
+import QuestionOverlay from "./QuestionOverlay";
 
 export default function Hero() {
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+  const [overlayStep, setOverlayStep] = useState<"waitlist" | "question">(
+    "waitlist"
+  );
 
-  const openOverlay = () => {
+  const openWaitlistOverlay = () => {
+    setOverlayStep("waitlist");
     setIsOverlayOpen(true);
   };
 
   const closeOverlay = () => {
     setIsOverlayOpen(false);
+    setTimeout(() => setOverlayStep("waitlist"), 300);
   };
 
   const handleBeginJourney = () => {
-    // TODO: Implement next sequence after "Begin Journey" button is clicked
-    console.log("Begin Journey clicked - next sequence will be added here");
+    setOverlayStep("question");
+  };
+
+  const handleQuestionNext = (selectedAnswer: string) => {
+    setIsOverlayOpen(false);
+    setTimeout(() => setOverlayStep("waitlist"), 300);
   };
 
   return (
@@ -43,7 +53,7 @@ export default function Hero() {
           </div>
           <div className="btn-container flex justify-center mt-[24px] sm:mt-[32px] md:mt-[40px] lg:mt-[44px] xl:mt-[48px]">
             <button
-              onClick={openOverlay}
+              onClick={openWaitlistOverlay}
               className="uppercase w-full sm:w-auto min-w-[200px] sm:min-w-[220px] md:min-w-[240px] lg:min-w-[260px] xl:min-w-[211px] h-[45px] sm:h-[48px] md:h-[52px] lg:h-[58px] xl:h-[61px] bg-[#B58E5A] text-white text-[14px] sm:text-[15px] md:text-base lg:text-lg xl:text-[19px] font-semibold tenor-font hover:bg-[#B58E5A]/90 hover:scale-95 hover:cursor-pointer transition-all duration-300 ease-in-out transform whitespace-nowrap px-4 sm:px-6"
             >
               Join the waitlist
@@ -51,12 +61,22 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Waitlist Overlay Component */}
-        <WaitlistOverlay
-          isOpen={isOverlayOpen}
-          onClose={closeOverlay}
-          onBeginJourney={handleBeginJourney}
-        />
+        {/* Conditional Overlay Rendering - Only one overlay at a time */}
+        {isOverlayOpen && overlayStep === "waitlist" && (
+          <WaitlistOverlay
+            isOpen={true}
+            onClose={closeOverlay}
+            onBeginJourney={handleBeginJourney}
+          />
+        )}
+
+        {isOverlayOpen && overlayStep === "question" && (
+          <QuestionOverlay
+            isOpen={true}
+            onClose={closeOverlay}
+            onNext={handleQuestionNext}
+          />
+        )}
       </section>
 
       {/* Custom Animations */}
