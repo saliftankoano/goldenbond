@@ -5,12 +5,14 @@ import { useState } from "react";
 import WaitlistOverlay from "./WaitlistOverlay";
 import QuestionOverlay from "./QuestionOverlay";
 import DataFormOverlay from "./DataFormOverlay";
+import SuccessOverlay from "./SuccessOverlay";
 
 export default function Hero() {
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
   const [overlayStep, setOverlayStep] = useState<
-    "waitlist" | "question" | "dataform"
+    "waitlist" | "question" | "dataform" | "success"
   >("waitlist");
+  const [userName, setUserName] = useState<string>("");
 
   const openWaitlistOverlay = () => {
     setOverlayStep("waitlist");
@@ -19,7 +21,10 @@ export default function Hero() {
 
   const closeOverlay = () => {
     setIsOverlayOpen(false);
-    setTimeout(() => setOverlayStep("waitlist"), 300);
+    setTimeout(() => {
+      setOverlayStep("waitlist");
+      setUserName("");
+    }, 300);
   };
 
   const handleBeginJourney = () => {
@@ -34,10 +39,11 @@ export default function Hero() {
 
   const handleDataFormSubmit = (formData: any) => {
     console.log("Form submitted:", formData);
+    // Store the user's name for the success message
+    setUserName(formData.fullName);
+    // Transition to success overlay
+    setOverlayStep("success");
     // TODO: Handle form submission (API call, etc.)
-    setIsOverlayOpen(false);
-    setTimeout(() => setOverlayStep("waitlist"), 300);
-    // Here you can add logic for final step or success message
   };
 
   return (
@@ -93,6 +99,14 @@ export default function Hero() {
             isOpen={true}
             onClose={closeOverlay}
             onSubmit={handleDataFormSubmit}
+          />
+        )}
+
+        {isOverlayOpen && overlayStep === "success" && (
+          <SuccessOverlay
+            isOpen={true}
+            onClose={closeOverlay}
+            userName={userName}
           />
         )}
       </section>
