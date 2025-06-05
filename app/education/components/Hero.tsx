@@ -4,12 +4,13 @@ import Image from "next/image";
 import { useState } from "react";
 import WaitlistOverlay from "./WaitlistOverlay";
 import QuestionOverlay from "./QuestionOverlay";
+import DataFormOverlay from "./DataFormOverlay";
 
 export default function Hero() {
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
-  const [overlayStep, setOverlayStep] = useState<"waitlist" | "question">(
-    "waitlist"
-  );
+  const [overlayStep, setOverlayStep] = useState<
+    "waitlist" | "question" | "dataform"
+  >("waitlist");
 
   const openWaitlistOverlay = () => {
     setOverlayStep("waitlist");
@@ -26,8 +27,17 @@ export default function Hero() {
   };
 
   const handleQuestionNext = (selectedAnswer: string) => {
+    console.log("Selected answer:", selectedAnswer);
+    // Transition to data form instead of closing
+    setOverlayStep("dataform");
+  };
+
+  const handleDataFormSubmit = (formData: any) => {
+    console.log("Form submitted:", formData);
+    // TODO: Handle form submission (API call, etc.)
     setIsOverlayOpen(false);
     setTimeout(() => setOverlayStep("waitlist"), 300);
+    // Here you can add logic for final step or success message
   };
 
   return (
@@ -75,6 +85,14 @@ export default function Hero() {
             isOpen={true}
             onClose={closeOverlay}
             onNext={handleQuestionNext}
+          />
+        )}
+
+        {isOverlayOpen && overlayStep === "dataform" && (
+          <DataFormOverlay
+            isOpen={true}
+            onClose={closeOverlay}
+            onSubmit={handleDataFormSubmit}
           />
         )}
       </section>
