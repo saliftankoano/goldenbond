@@ -19,7 +19,7 @@ export default function WaitlistOverlay({
     <div className="absolute inset-0 z-50">
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-transparent backdrop-blur-sm animate-fade-in"
+        className="absolute inset-0 bg-transparent backdrop-blur-[14px] animate-fade-in"
         onClick={onClose}
       ></div>
 
@@ -28,10 +28,10 @@ export default function WaitlistOverlay({
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="hover:cursor-pointer absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center bg-white/80 hover:bg-white/90 rounded-full transition-colors duration-200 backdrop-blur-sm"
+          className="hover:cursor-pointer absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center rounded-full transition-colors duration-200"
         >
           <svg
-            className="w-5 h-5 text-gray-600"
+            className="w-14 h-14 text-white"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -97,7 +97,7 @@ export default function WaitlistOverlay({
               </div>
 
               {/* Small Ellipse - Right Side - Responsive */}
-              <div className="absolute -right-10 sm:-right-12 md:-right-16 lg:-right-20 top-8 sm:top-10 md:top-12 lg:top-16 w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[140px] md:h-[140px] lg:w-[153px] lg:h-[153px] z-0">
+              <div className="absolute -right-10 sm:-right-12 md:-right-16 lg:-right-30 top-8 sm:top-10 md:top-12 lg:-top-16 w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[140px] md:h-[140px] lg:w-[153px] lg:h-[153px] z-0">
                 <Image
                   src="/images/small-ellipse.svg"
                   alt=""
@@ -114,7 +114,7 @@ export default function WaitlistOverlay({
                   {/* Image 1 - Business/Planning */}
                   <div className="relative w-[130px] h-[130px] sm:w-[140px] sm:h-[140px] overflow-hidden drop-shadow-lg flex-shrink-0">
                     <Image
-                      src="/images/education/nice-showcase.jpg"
+                      src="/images/education/education.webp"
                       alt="Business planning and jewelry design"
                       fill
                       className="object-cover"
@@ -140,17 +140,15 @@ export default function WaitlistOverlay({
                       className="object-cover"
                     />
                   </div>
-
                   {/* Image 4 - Students/Instructors */}
                   <div className="relative w-[130px] h-[130px] sm:w-[140px] sm:h-[140px] overflow-hidden drop-shadow-lg flex-shrink-0">
                     <Image
-                      src="/images/education/education.webp"
-                      alt="Students and instructors"
+                      src="/images/education/nice-showcase.jpg"
+                      alt="Business planning and jewelry design"
                       fill
                       className="object-cover"
                     />
                   </div>
-
                   {/* Image 5 - Training Badge - Now visible on mobile too */}
                   <div className="relative w-[130px] h-[130px] sm:w-[140px] sm:h-[140px] overflow-hidden drop-shadow-lg flex-shrink-0 col-span-2 sm:col-span-1 justify-self-center">
                     <Image
@@ -167,7 +165,7 @@ export default function WaitlistOverlay({
                   {/* Image 1 - Business/Planning */}
                   <div className="relative w-[180px] h-[180px] lg:w-[220px] lg:h-[225px] xl:w-[250px] xl:h-[256px] overflow-hidden drop-shadow-lg flex-shrink-0">
                     <Image
-                      src="/images/education/nice-showcase.jpg"
+                      src="/images/education/education.webp"
                       alt="Business planning and jewelry design"
                       fill
                       className="object-cover"
@@ -197,7 +195,7 @@ export default function WaitlistOverlay({
                   {/* Image 4 - Students/Instructors */}
                   <div className="relative w-[180px] h-[180px] lg:w-[220px] lg:h-[225px] xl:w-[250px] xl:h-[256px] overflow-hidden drop-shadow-lg flex-shrink-0">
                     <Image
-                      src="/images/education/education.webp"
+                      src="/images/education/nice-showcase.jpg"
                       alt="Students and instructors"
                       fill
                       className="object-cover"
@@ -208,7 +206,7 @@ export default function WaitlistOverlay({
                   <div className="relative w-[180px] h-[180px] lg:w-[220px] lg:h-[225px] xl:w-[250px] xl:h-[256px] overflow-hidden drop-shadow-lg flex-shrink-0">
                     <Image
                       src="/images/education/course.webp"
-                      alt="Students and instructors"
+                      alt="Training course"
                       fill
                       className="object-cover"
                     />
