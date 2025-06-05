@@ -84,10 +84,10 @@ export default function DataFormOverlay({
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="hover:cursor-pointer absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center bg-white/80 hover:bg-white/90 rounded-full transition-colors duration-200 backdrop-blur-sm"
+          className="hover:cursor-pointer absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center rounded-full transition-colors duration-200"
         >
           <svg
-            className="w-5 h-5 text-gray-600"
+            className="w-14 h-14 text-white"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -280,27 +280,6 @@ export default function DataFormOverlay({
                 />
               </svg>
             </button>
-
-            {/* Decorative Elements */}
-            <div className="absolute -left-10 sm:-left-16 md:-left-20 top-1/4 w-[80px] h-[80px] sm:w-[120px] sm:h-[120px] md:w-[150px] md:h-[150px] z-0">
-              <Image
-                src="/images/small-ellipse.svg"
-                alt=""
-                width={153}
-                height={153}
-                className="opacity-20 sm:opacity-30"
-              />
-            </div>
-
-            <div className="absolute -right-10 sm:-right-16 md:-right-20 bottom-1/4 w-[100px] h-[100px] sm:w-[150px] sm:h-[150px] md:w-[200px] md:h-[200px] z-0">
-              <Image
-                src="/images/large-ellipse.svg"
-                alt=""
-                width={257}
-                height={257}
-                className="opacity-20 sm:opacity-30"
-              />
-            </div>
           </div>
         </div>
       </div>
