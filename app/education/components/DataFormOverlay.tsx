@@ -9,7 +9,7 @@ interface DataFormOverlayProps {
   onSubmit: (formData: FormData) => void;
 }
 
-interface FormData {
+export interface FormData {
   fullName: string;
   birthday: string;
   email: string;

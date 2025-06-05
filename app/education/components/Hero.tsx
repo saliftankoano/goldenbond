@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import WaitlistOverlay from "./WaitlistOverlay";
 import QuestionOverlay from "./QuestionOverlay";
-import DataFormOverlay from "./DataFormOverlay";
+import DataFormOverlay, { FormData } from "./DataFormOverlay";
 import SuccessOverlay from "./SuccessOverlay";
 
 export default function Hero() {
@@ -37,7 +37,7 @@ export default function Hero() {
     setOverlayStep("dataform");
   };
 
-  const handleDataFormSubmit = (formData: any) => {
+  const handleDataFormSubmit = (formData: FormData) => {
     console.log("Form submitted:", formData);
     // Store the user's name for the success message
     setUserName(formData.fullName);
