@@ -112,7 +112,7 @@ export default function StaticHeader() {
                   <div className="absolute top-full right-0 mt-2 w-48 bg-[#F4F1EB] backdrop-blur-sm border border-amber-200/20 shadow-lg z-50">
                     <div className="py-2 uppercase tenor-font">
                       <Link
-                        href="/events/corporate"
+                        href="/corporate"
                         className="block px-4 py-2 pb-3 text-[#B58E5A] text-[16px] leading-[120%] font-light tracking-wider relative group transition-colors duration-300"
                         onClick={() => setIsEventsOpen(false)}
                       >
@@ -120,7 +120,7 @@ export default function StaticHeader() {
                         <span className="absolute bottom-1 left-4 right-4 h-px bg-[#B58E5A] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
                       </Link>
                       <Link
-                        href="/events/private"
+                        href="/private-party"
                         className="block px-4 py-2 pb-3 text-[#B58E5A] text-[16px] leading-[120%] font-light tracking-wider relative group transition-colors duration-300"
                         onClick={() => setIsEventsOpen(false)}
                       >
