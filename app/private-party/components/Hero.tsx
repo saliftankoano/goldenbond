@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-// Test precommit hook
+// Test precommit hook test
 export default function Hero() {
   return (
     <section className="private-party-hero flex bg-[#F4F1EB] relative">
