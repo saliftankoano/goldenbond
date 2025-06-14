@@ -151,7 +151,7 @@ export default function Faq() {
           alt="large ellipse"
           width={257}
           height={257}
-          className="absolute -bottom-[60px] sm:-bottom-[80px] md:-bottom-[100px] -left-[30px] sm:-left-[50px] md:-left-[80px] lg:-left-[120px] w-[80px] h-[80px] sm:w-[120px] sm:h-[120px] md:w-[180px] md:h-[180px] lg:w-[220px] lg:h-[220px] xl:w-[257px] xl:h-[257px] z-0"
+          className="absolute bottom-[20px] sm:bottom-[40px] md:bottom-[60px] -left-[30px] sm:-left-[50px] md:-left-[80px] lg:-left-[120px] w-[80px] h-[80px] sm:w-[120px] sm:h-[120px] md:w-[180px] md:h-[180px] lg:w-[220px] lg:h-[220px] xl:w-[257px] xl:h-[257px] z-0"
         />
       </div>
     </section>
