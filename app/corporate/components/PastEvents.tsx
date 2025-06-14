@@ -40,7 +40,7 @@ export default function PastEvents() {
     <section className="w-screen bg-[#F4F1EB] flex flex-col items-center py-[100px]">
       {/* Header */}
       <div className="text-center mb-[80px]">
-        <h2 className="garamond-font text-[48px] text-black leading-[120%] mb-[16px]">
+        <h2 className="garamond-font text-[48px] font-semibold text-black leading-[120%] mb-[16px]">
           See something you like?
         </h2>
         <p className="tenor-font text-[16px] text-[#666666] leading-[150%]">
