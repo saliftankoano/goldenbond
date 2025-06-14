@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="private-party-hero flex bg-[#F4F1EB] relative">
+    <section className="corporate-hero flex bg-[#F4F1EB] relative">
       <div className="left ml-[60px] mt-[45px]">
         <div className="w-[622px] h-[361px] flex flex-col justify-center mx-auto">
           <h1 className="w-full text-[70px] text-black garamond-font leading-[110%] mb-[21px]">
@@ -32,16 +32,6 @@ export default function Hero() {
             className="object-cover"
           />
         </div>
-      </div>
-
-      {/* Large Ellipse */}
-      <div className="absolute bottom-[80px] right-[23.5%] transform -translate-x-1/2 z-20">
-        <Image
-          src="/images/large-ellipse.svg"
-          alt=""
-          width={257}
-          height={257}
-        />
       </div>
     </section>
   );
