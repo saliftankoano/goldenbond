@@ -8,31 +8,31 @@ export default function PastEvents() {
       title: "Event Name",
       description:
         "Whether you're an individual entrepreneur or a team looking to expand your skills.",
-      image: "/images/private-party/hero.jpg",
+      image: "/images/corporate/event1.jpg",
     },
     {
       title: "Event Name",
       description:
         "Whether you're an individual entrepreneur or a team looking to expand your skills.",
-      image: "/images/private-party/hero.jpg",
+      image: "/images/corporate/event1.jpg",
     },
     {
       title: "Event Name",
       description:
         "Whether you're an individual entrepreneur or a team looking to expand your skills.",
-      image: "/images/private-party/hero.jpg",
+      image: "/images/corporate/event1.jpg",
     },
     {
       title: "Event Name",
       description:
         "Whether you're an individual entrepreneur or a team looking to expand your skills.",
-      image: "/images/private-party/hero.jpg",
+      image: "/images/corporate/event1.jpg",
     },
     {
       title: "Event Name",
       description:
         "Whether you're an individual entrepreneur or a team looking to expand your skills.",
-      image: "/images/private-party/hero.jpg",
+      image: "/images/corporate/event1.jpg",
     },
   ];
 
@@ -54,7 +54,7 @@ export default function PastEvents() {
           {pastEvents.map((event, index) => (
             <div key={index} className="flex flex-col w-[320px] flex-shrink-0">
               {/* Event Image */}
-              <div className="w-[320px] h-[240px] relative mb-[20px] rounded-[8px] overflow-hidden">
+              <div className="w-[320px] h-[240px] relative mb-[20px] overflow-hidden">
                 <Image
                   src={event.image}
                   alt={event.title}
