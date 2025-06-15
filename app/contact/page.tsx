@@ -6,7 +6,7 @@ import Faq from "@/app/components/Faq";
 import Hero from "@/app/contact/components/Hero";
 import Testimonials from "@/app/components/Testimonials";
 
-export default function PrivateParty() {
+export default function Contact() {
   return (
     <>
       <StaticHeader />
