@@ -8,7 +8,7 @@ import Partners from "@/app/corporate/components/Partners";
 import Find from "@/app/corporate/components/Find";
 import PastEvents from "@/app/corporate/components/PastEvents";
 
-export default function PrivateParty() {
+export default function Corporate() {
   return (
     <>
       <StaticHeader />
