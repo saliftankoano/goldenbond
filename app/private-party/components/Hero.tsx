@@ -4,27 +4,27 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="private-party-hero flex bg-[#F4F1EB] relative">
-      <div className="left ml-[60px] mt-[45px]">
-        <div className="w-[622px] h-[361px] flex flex-col justify-center mx-auto">
-          <h1 className="w-full text-[70px] text-black garamond-font leading-[110%] mb-[21px]">
-            Book a Private <br /> Jewerly Party
+    <section className="private-party-hero flex flex-col lg:flex-row bg-[#F4F1EB] relative pb-[40px] md:pb-[60px] lg:pb-[80px] overflow-x-hidden">
+      <div className="left w-full lg:w-1/2 px-[20px] sm:px-[40px] md:px-[50px] lg:ml-[60px] lg:px-0 mt-[30px] md:mt-[40px] lg:mt-[45px]">
+        <div className="w-full max-w-[622px] flex flex-col mx-auto lg:mx-0">
+          <h1 className="w-full text-[32px] sm:text-[38px] md:text-[44px] lg:text-[50px] xl:text-[54px] text-black garamond-font leading-[120%] mb-[16px] md:mb-[21px]">
+            Book a Private <br /> Jewelry Party
           </h1>
-          <p className="w-full text-[17px] text-[#4A4A4A] leading-[150%] tenord-font">
+          <p className="w-full text-[15px] md:text-[16px] lg:text-[17px] text-[#4A4A4A] leading-[150%] tenord-font mb-[30px] md:mb-[40px] lg:mb-[72px]">
             Golden Bond Jewelry creates custom-fit, welded permanent jewelry in
-            14K
-            <br /> gold and sterling silver, as well as clasped and ready to
-            wear jewelry.
+            14K gold and sterling silver, as well as clasped and ready to wear
+            jewelry.
           </p>
-          <div className="w-full flex justify-center lg:justify-start mt-[72px] z-10">
-            <button className="w-full sm:w-auto min-w-[240px] lg:min-w-[211px] h-[50px] md:h-[55px] px-[8%] md:px-[10%] bg-[#B58E5A] text-sm sm:text-base lg:text-[16px] text-white flex items-center justify-center font-semibold hover:cursor-pointer hover:bg-[#B58E5A]/80 hover:text-white transition-all duration-300 uppercase">
+          <div className="w-full flex justify-center lg:justify-start z-10">
+            <button className="w-full sm:w-auto min-w-[280px] sm:min-w-[320px] lg:min-w-[400px] h-[48px] md:h-[52px] lg:h-[55px] px-[6%] sm:px-[8%] md:px-[10%] bg-[#B58E5A] text-[14px] sm:text-[15px] lg:text-[16px] text-white flex items-center justify-center font-semibold hover:cursor-pointer hover:bg-[#B58E5A]/80 hover:text-white transition-all duration-300 uppercase">
               <p className="whitespace-nowrap">Plan My Event</p>
             </button>
           </div>
         </div>
       </div>
-      <div className="right flex justify-end ml-[10%] mt-[45px]">
-        <div className="w-[682px] h-[737px] relative z-10">
+
+      <div className="right hidden md:flex w-full lg:w-1/2 justify-center lg:justify-end mt-[40px] lg:mt-[45px] px-[20px] lg:px-0 lg:ml-[5%] xl:ml-[10%] relative">
+        <div className="w-full max-w-[500px] sm:max-w-[600px] lg:max-w-[682px] h-[400px] sm:h-[500px] md:h-[600px] lg:h-[737px] relative z-10">
           <Image
             src="/images/private-party/hero.jpg"
             alt="Private Party"
@@ -32,16 +32,13 @@ export default function Hero() {
             className="object-cover"
           />
         </div>
-      </div>
 
-      {/* Large Ellipse */}
-      <div className="absolute bottom-[80px] right-[23.5%] transform -translate-x-1/2 z-20">
-        <Image
-          src="/images/large-ellipse.svg"
-          alt=""
-          width={257}
-          height={257}
-        />
+        {/* Large Ellipse - Responsive positioning */}
+        <div className="absolute bottom-[40px] md:bottom-[60px] lg:bottom-[80px] right-[10%] sm:right-[15%] lg:right-[23.5%] z-20">
+          <div className="w-[180px] h-[180px] sm:w-[200px] sm:h-[200px] md:w-[220px] md:h-[220px] lg:w-[257px] lg:h-[257px]">
+            <Image src="/images/large-ellipse.svg" alt="" fill />
+          </div>
+        </div>
       </div>
     </section>
   );
