@@ -27,7 +27,7 @@ export default function Find() {
   ];
 
   return (
-    <section className="w-screen bg-[#F4F1EB] flex flex-col items-center relative pt-[100px]">
+    <section className="w-screen bg-[#F4F1EB] flex flex-col items-center relative pt-[100px] overflow-x-hidden">
       {/* Small Ellipse */}
       <div className="absolute top-[120px] left-[5px]">
         <Image
