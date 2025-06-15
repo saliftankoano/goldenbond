@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Who() {
   return (
-    <section className="who-section w-full min-h-screen lg:h-[1024px] flex items-center py-8 md:py-12 lg:py-0">
+    <section className="who-section w-full min-h-screen lg:h-[1024px] flex items-center py-8 md:py-12 lg:py-0 overflow-x-hidden">
       <div className="who-content w-full max-w-7xl lg:w-[1318px] h-auto lg:h-[737px] mx-auto flex flex-col lg:flex-row items-center lg:items-start px-4 md:px-6 lg:px-0 gap-8 lg:gap-0">
         {/* Left Content */}
         <div className="who-content-left w-full lg:w-[552px] h-auto lg:h-[579px] flex">
